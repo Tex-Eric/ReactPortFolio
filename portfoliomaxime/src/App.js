@@ -1,4 +1,4 @@
-import Intro from "./Component/Intro/Intro";
+import Intro from "./Page/Intro/Intro";
 import WallpaperV01 from "./Component/Wallpaper/WallpaperV01";
 import WallpaperV02 from "./Component/Wallpaper/WallpaperV02";
 

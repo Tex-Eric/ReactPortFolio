@@ -19,7 +19,7 @@ function WallpaperV02() {
         objectFit: "contain",
         width: "100%",
         height: "100%",
-        transform: "scale(6.5)"
+        transform: "scale(5)"
     }
 
     return (
