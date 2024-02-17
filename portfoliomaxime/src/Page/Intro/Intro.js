@@ -3,16 +3,17 @@ import useMediaQuery from "../../Utils/useMediaQuery";
 import {IntroGlobalStyle, Typo01Style, Typo02Style} from "./IntroStyle";
 
 
-function Intro() {
+function Intro({pageIsMenuButton}) {
     const isDesktop = useMediaQuery('(min-width: 640px)');
-    const buttonWrite = 'Voire plus';
+    const buttonWrite = 'Voir plus';
+
 
   return (
     <div>
       <div style={IntroGlobalStyle(isDesktop)}>
         <p style={Typo01Style(isDesktop)}>Bienvenu sur mon site</p>
         <p style={Typo02Style(isDesktop)}>Je suis Maxime</p>
-        <Buttonbias write={buttonWrite}/>
+        <Buttonbias write={buttonWrite} newFunction={pageIsMenuButton}/>
       </div>
     </div>
   );

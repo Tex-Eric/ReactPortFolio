@@ -4,7 +4,7 @@ import { ButtonTypo01Style, ButtonbiasStyleShape, ButtonbiasStyleShapeActive } f
 import React, { useState } from 'react';
 
 
-function Buttonbias({write}) {
+function Buttonbias({write, newFunction = null }) {
     const [isHovered, setIsHovered] = useState(false);
     const [isActive, setIsActive] = useState(false);
     const isDesktop = useMediaQuery('(min-width: 640px)');
@@ -12,9 +12,7 @@ function Buttonbias({write}) {
     const isActiveStyle = (Active) => (
         Active ? ButtonbiasStyleShapeActive : ButtonbiasStyleShape(isHovered)
     );
-    const handleClick = () => (
-        console.log('Ca a clické !')
-    );
+    const handleClick = () => newFunction && newFunction();
 
   return (
     <div style={isActiveStyle(isActive)}
