@@ -1,14 +1,31 @@
+import useMediaQuery from "../../Utils/useMediaQuery";
 import ButtonbiasBackground from "./ButtonbiasBackground";
-import { ButtonbiasStyleShape } from "./ButtonbiasStyle";
-import React from 'react';
+import { ButtonTypo01Style, ButtonbiasStyleShape, ButtonbiasStyleShapeActive } from "./ButtonbiasStyle";
+import React, { useState } from 'react';
 
 
 function Buttonbias({write}) {
+    const [isHovered, setIsHovered] = useState(false);
+    const [isActive, setIsActive] = useState(false);
+    const isDesktop = useMediaQuery('(min-width: 640px)');
+
+    const isActiveStyle = (Active) => (
+        Active ? ButtonbiasStyleShapeActive : ButtonbiasStyleShape(isHovered)
+    );
+    const handleClick = () => (
+        console.log('Ca a clické !')
+    );
 
   return (
-    <div style={ButtonbiasStyleShape}>
+    <div style={isActiveStyle(isActive)}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)+setIsActive(false)}
+        onMouseDown={() => setIsActive(true)}
+        onMouseUp={() => setIsActive(false)}
+        onClick={handleClick}
+        >
         <ButtonbiasBackground/>
-        <p>{write}</p>
+        <p style={ButtonTypo01Style(isDesktop)}>{write}</p>
     </div>
   );
 }

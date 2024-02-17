@@ -5,7 +5,7 @@ import {IntroGlobalStyle, Typo01Style, Typo02Style} from "./IntroStyle";
 
 function Intro() {
     const isDesktop = useMediaQuery('(min-width: 640px)');
-    const buttonWrite = 'Voir plus';
+    const buttonWrite = 'Voire plus';
 
   return (
     <div>
