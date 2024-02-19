@@ -6,6 +6,7 @@ import {IntroGlobalStyle, Typo01Style, Typo02Style} from "./IntroStyle";
 function Intro({pageIsMenuButton}) {
     const isDesktop = useMediaQuery('(min-width: 640px)');
     const buttonWrite = 'Voir plus';
+    const returnWrite = '← retour';
 
 
   return (
