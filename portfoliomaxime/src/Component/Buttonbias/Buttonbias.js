@@ -4,13 +4,13 @@ import { ButtonTypo01Style, ButtonbiasStyleShape, ButtonbiasStyleShapeActive } f
 import React, { useState } from 'react';
 
 
-function Buttonbias({write, newFunction = null }) {
+function Buttonbias({write, newFunction = null, gridColumn, gridRow, isSkew, dimension }) {
     const [isHovered, setIsHovered] = useState(false);
     const [isActive, setIsActive] = useState(false);
     const isDesktop = useMediaQuery('(min-width: 640px)');
 
     const isActiveStyle = (Active) => (
-        Active ? ButtonbiasStyleShapeActive : ButtonbiasStyleShape(isHovered)
+        Active ? ButtonbiasStyleShapeActive(gridColumn, gridRow, isSkew) : ButtonbiasStyleShape(isHovered, gridColumn, gridRow, isSkew)
     );
     const handleClick = () => newFunction && newFunction();
 
@@ -22,7 +22,7 @@ function Buttonbias({write, newFunction = null }) {
         onMouseUp={() => setIsActive(false)}
         onClick={handleClick}
         >
-        <ButtonbiasBackground/>
+        <ButtonbiasBackground dimension={dimension}/>
         <p style={ButtonTypo01Style(isDesktop)}>{write}</p>
     </div>
   );
