@@ -5,6 +5,7 @@ import WallpaperV02 from "./Component/Wallpaper/WallpaperV02";
 import MenuBottun from './Page/MenuBottun/MenuBottun';
 import InWork from './Page/InWork/InWork';
 import MenuArt from './Page/MenuArt/MenuArt';
+import MenuProg from './Page/MenuProg/MenuProg';
 
 
 function App() {
@@ -12,14 +13,17 @@ function App() {
 
   const pageIsMenuButton = () =>{return setPageActive("MenuBottun")}
   const pageIsMenuArt = () =>{return setPageActive("MenuArt")}
+  const pageIsMenuProg = () =>{return setPageActive("MenuProg")}
   const pageIsInWork = () =>{return setPageActive("InWork")}
   const pageIsIntro = () =>{return setPageActive(null)}
 
   const pageIsActive = (pageActive) => {
       if(pageActive === "MenuBottun"){
-        return <MenuBottun pageIsMenuArt={pageIsMenuArt} pageIsInWork={pageIsInWork} pageIsIntro={pageIsIntro}/>;
+        return <MenuBottun pageIsMenuArt={pageIsMenuArt} pageIsMenuProg={pageIsMenuProg} pageIsInWork={pageIsInWork} pageIsIntro={pageIsIntro}/>;
       } else if (pageActive === "MenuArt"){
         return <MenuArt pageIsIntro={pageIsIntro} />
+      } else if (pageActive === "MenuProg"){
+        return <MenuProg pageIsIntro={pageIsIntro} />
       } else if (pageActive === "InWork"){
         return <InWork pageIsIntro={pageIsIntro}/>;
       } else{

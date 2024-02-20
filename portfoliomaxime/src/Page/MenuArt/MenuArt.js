@@ -1,5 +1,5 @@
 import Buttonbias from "../../Component/Buttonbias/Buttonbias";
-import { MenuArtComponentLeft, MenuArtFirstImage, MenuArtImage, MenuArtLinkText, MenuArtSecondtImage, MenuArtText, MenuArtTextText, MenuArtTitleText, MenuArtVue } from "./MenuArtStyle";
+import { MenuArtComponentLeft, MenuArtFirstImage, MenuArtImage, MenuArtLinkText, MenuArtText, MenuArtTextText, MenuArtTitleText, MenuArtVue } from "./MenuArtStyle";
 import Datas from "../../Data/DataArt/DataArt.json"
 import React from "react";
 
