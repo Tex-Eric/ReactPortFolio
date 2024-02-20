@@ -2,7 +2,7 @@ import Buttonbias from "../../Component/Buttonbias/Buttonbias";
 import useMediaQuery from "../../Utils/useMediaQuery";
 import { MenuBottunGrid01, MenuBottunGrid02, MenuBottunGrid03, MenuBottunGrid04 } from "./MenuBottunStyle";
 
-function MenuBottun({pageIsInWork, pageIsIntro}) {
+function MenuBottun({pageIsMenuArt, pageIsInWork, pageIsIntro}) {
     const isDesktop = useMediaQuery('(min-width: 640px)');
     
     const text = {
@@ -24,7 +24,7 @@ function MenuBottun({pageIsInWork, pageIsIntro}) {
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100vh', overflow: 'hidden' }}>
             {isDesktop ? (
                 <div style={MenuBottunGrid01}>
-                    <Buttonbias write={text.art} newFunction={pageIsInWork} gridColumn={"1"} gridRow={"1/6"} dimension={5} />
+                    <Buttonbias write={text.art} newFunction={pageIsMenuArt} gridColumn={"1"} gridRow={"1/6"} dimension={5} />
                     <Buttonbias write={text.prog} newFunction={pageIsInWork} gridColumn={"2"} gridRow={"1/3"} dimension={5} />
                     <Buttonbias write={text.info} newFunction={pageIsInWork} gridColumn={"2"} gridRow={"3"} dimension={5} />
                     <Buttonbias write={text.dev} newFunction={pageIsInWork} gridColumn={"2"} gridRow={"4"} dimension={5} />
@@ -36,7 +36,7 @@ function MenuBottun({pageIsInWork, pageIsIntro}) {
                 </div>
             ) : (
                 <div style={MenuBottunGrid03}>
-                    <Buttonbias write={text.art} newFunction={pageIsInWork} gridColumn={"1/3"} gridRow={"1/3"} isSkew={true} dimension={3} />
+                    <Buttonbias write={text.art} newFunction={pageIsMenuArt} gridColumn={"1/3"} gridRow={"1/3"} isSkew={true} dimension={3} />
                     <Buttonbias write={text.prog} newFunction={pageIsInWork} gridColumn={"1/3"} gridRow={"3/4"} isSkew={true} dimension={3} />
                     <Buttonbias write={text.info} newFunction={pageIsInWork} gridColumn={"1"} gridRow={"4"} isSkew={true} dimension={2} />
                     <Buttonbias write={text.dev} newFunction={pageIsInWork} gridColumn={"2/3"} gridRow={"4"} isSkew={true} dimension={2} />
