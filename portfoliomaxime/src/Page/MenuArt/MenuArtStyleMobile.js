@@ -1,25 +1,25 @@
-export const MenuArtVue = {
+export const MenuArtMobileVue = {
     display:'flex',
     flexDirection:'column',
-    justifyContent:'flex-start',
-    alignItem: 'center',
-    margin: '40px',
-    gap:'40px'
+    justifyContent:'center',
+    alignItems: 'center',
+    margin: '30px 0 30px 0',
+    gap:'10px'
 
 
 }
-export const MenuArtComponentLeft = {
+export const MenuArtMobileComponentLeft = {
     display:'flex',
-    flexDirection:'row',
+    flexDirection:'column',
     justifyContent:'center',
-    alignItem: 'center',
+    alignItems: 'center'
 
 }
 /* ------------------------------------------------------------------- */
-export const MenuArtImage = (left) => ({
+export const MenuArtMobileImage = (left) => ({
     border:"5px solid #B2E2F2",
     borderRadius: '2px 2px 2px 2px',
-    width: '25%',
+    width: '76%',
     display: 'grid',
     gridTemplateColumns: left? "2fr 1fr" : "1fr 2fr",
     gridTemplateRows:"1fr 1fr 1fr",
@@ -27,7 +27,7 @@ export const MenuArtImage = (left) => ({
     gap:"5px",
     backgroundColor:"#10101C"
 });
-export const MenuArtFirstImage = (left) => ({
+export const MenuArtMobileFirstImage = (left) => ({
     objectFit: 'contain',
     width: "100%",
     height: "100%",
@@ -35,7 +35,7 @@ export const MenuArtFirstImage = (left) => ({
     gridColumn: "1/3",
     gridRow:"1/4"
 });
-export const MenuArtSecondtImage = (gridColumn, left) => ({
+export const MenuArtMobileSecondtImage = (gridColumn, left) => ({
     objectFit: 'contain',
     width: "100%",
     height: "100%",
@@ -43,35 +43,35 @@ export const MenuArtSecondtImage = (gridColumn, left) => ({
     gridRow:`${gridColumn}`
 });
 /* ------------------------------------------------------------------- */
-export const MenuArtText = (left) => ({
-    borderTop:"3px solid #B2E2F2",
-    borderRight:left? "3px solid #B2E2F2" : "0px solid #B2E2F2",
+export const MenuArtMobileText = (left) => ({
+    borderTop:"0px solid #B2E2F2",
+    borderRight:"3px solid #B2E2F2",
     borderBottom:"3px solid #B2E2F2",
-    borderLeft: left? "0px solid #B2E2F2" : "3px solid #B2E2F2", 
-    borderRadius: left? '2px 2px 100px 2px':'2px 2px 2px 100px', 
-    margin: left? '40px 40px 40px 0' : '40px 0 40px 40px' , 
-    padding: '0 40px 25px 40px',
-    width: '50%',
+    borderLeft:"3px solid #B2E2F2", 
+    borderRadius:'2px 2px 12px 12px', 
+    margin: '0 10px 10px 0' , 
+    padding: '0 10px 5px 10px',
+    width: '67%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     backgroundColor:"rgba(17, 36, 52, 0.9)"
 });
-export const MenuArtTitleText = {
+export const MenuArtMobileTitleText = {
     fontFamily: "Electrolize,sans-serif,Arial,Verdana",
-    fontSize: "30px",
+    fontSize: "25px",
     fontWeight: "700",
     color: "#FFFFFF",
-    margin:'40px 0 0 0'
+    margin:'10px 0 0 0'
 }
-export const MenuArtTextText = {
+export const MenuArtMobileTextText = {
     fontFamily: "Electrolize,sans-serif,Arial,Verdana",
-    fontSize: "25px",
+    fontSize: "15px",
     color: "#E0E0E0",
 }
-export const MenuArtLinkText = {
+export const MenuArtMobileLinkText = {
     fontFamily: "Electrolize,sans-serif,Arial,Verdana",
-    fontSize: "25px",
+    fontSize: "15px",
     color: "#B9DEDF",
     overflow:"hidden"
 }

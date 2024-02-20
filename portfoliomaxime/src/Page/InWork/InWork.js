@@ -1,7 +1,7 @@
 import Buttonbias from "../../Component/Buttonbias/Buttonbias";
 
 function InWork({pageIsIntro}){
-const message = 'Page en cours de création, merci de patienté.';
+const message = 'Page en cours de création, merci de patienter.';
 const returnWrite = '← retour';
 
     return (
