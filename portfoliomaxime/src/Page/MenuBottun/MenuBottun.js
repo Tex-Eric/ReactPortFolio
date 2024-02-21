@@ -2,7 +2,7 @@ import Buttonbias from "../../Component/Buttonbias/Buttonbias";
 import useMediaQuery from "../../Utils/useMediaQuery";
 import { MenuBottunGrid01, MenuBottunGrid02, MenuBottunGrid03, MenuBottunGrid04 } from "./MenuBottunStyle";
 
-function MenuBottun({pageIsMenuArt, pageIsMenuProg, pageIsToolInfo, pageIsToolDev, pageIsInWork, pageIsIntro}) {
+function MenuBottun({pageIsMenuArt, pageIsMenuProg, pageIsToolInfo, pageIsToolDev, pageIsParcours, pageIsInWork, pageIsIntro}) {
     const isDesktop = useMediaQuery('(min-width: 640px)');
     
     const text = {
@@ -29,7 +29,7 @@ function MenuBottun({pageIsMenuArt, pageIsMenuProg, pageIsToolInfo, pageIsToolDe
                     <Buttonbias write={text.info} newFunction={pageIsToolInfo} gridColumn={"2"} gridRow={"3"} dimension={5} />
                     <Buttonbias write={text.dev} newFunction={pageIsToolDev} gridColumn={"2"} gridRow={"4"} dimension={5} />
                     <div style={MenuBottunGrid02}>
-                        <Buttonbias write={text.parc} newFunction={pageIsInWork} gridColumn={"1"} gridRow={"1"} dimension={3} />
+                        <Buttonbias write={text.parc} newFunction={pageIsParcours} gridColumn={"1"} gridRow={"1"} dimension={3} />
                         <Buttonbias write={text.desc} newFunction={pageIsInWork} gridColumn={"2"} gridRow={"1"} dimension={3} />
                         <Buttonbias write={text.bonus} newFunction={pageIsInWork} gridColumn={"3"} gridRow={"1"} dimension={3} />
                     </div>
@@ -41,7 +41,7 @@ function MenuBottun({pageIsMenuArt, pageIsMenuProg, pageIsToolInfo, pageIsToolDe
                     <Buttonbias write={text.info} newFunction={pageIsToolInfo} gridColumn={"1"} gridRow={"4"} isSkew={true} dimension={2} />
                     <Buttonbias write={text.dev} newFunction={pageIsToolDev} gridColumn={"2/3"} gridRow={"4"} isSkew={true} dimension={2} />
                     <div style={MenuBottunGrid04}>
-                        <Buttonbias write={text.parc} newFunction={pageIsInWork} gridColumn={"1"} gridRow={"1"} dimension={2} />
+                        <Buttonbias write={text.parc} newFunction={pageIsParcours} gridColumn={"1"} gridRow={"1"} dimension={2} />
                         <Buttonbias write={text.desc} newFunction={pageIsInWork} gridColumn={"2"} gridRow={"1"} dimension={2} />
                         <Buttonbias write={text.bonus} newFunction={pageIsInWork} gridColumn={"3"} gridRow={"1"} dimension={2} />
                     </div>

@@ -7,6 +7,7 @@ import InWork from './Page/InWork/InWork';
 import MenuArt from './Page/MenuArt/MenuArt';
 import MenuProg from './Page/MenuProg/MenuProg';
 import Tool from './Page/Tool/Tool';
+import Parcours from './Page/Parcours/Parcours';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   const pageIsMenuProg = () =>{return setPageActive("MenuProg")}
   const pageIsToolInfo = () =>{return setPageActive("ToolInfo")}
   const pageIsToolDev = () =>{return setPageActive("ToolDev")}
+  const pageIsParcours = () =>{return setPageActive("Parcours")}
   const pageIsInWork = () =>{return setPageActive("InWork")}
   const pageIsIntro = () =>{return setPageActive(null)}
 
@@ -27,6 +29,7 @@ function App() {
         pageIsMenuProg={pageIsMenuProg}
         pageIsToolInfo={pageIsToolInfo}
         pageIsToolDev={pageIsToolDev}
+        pageIsParcours={pageIsParcours}
         pageIsInWork={pageIsInWork} 
         pageIsIntro={pageIsIntro}/>;
       } else if (pageActive === "MenuArt"){
@@ -37,6 +40,8 @@ function App() {
         return <Tool pageIsIntro={pageIsIntro} isInf={true} />
       } else if (pageActive === "ToolDev"){
         return <Tool pageIsIntro={pageIsIntro} isInf={false} />
+      } else if (pageActive === "Parcours"){
+        return <Parcours pageIsIntro={pageIsIntro} />
       } else if (pageActive === "InWork"){
         return <InWork pageIsIntro={pageIsIntro}/>;
       } else{
