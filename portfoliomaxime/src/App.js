@@ -1,23 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
+import Intro from "./Page/Intro/Intro";
+import WallpaperV01 from "./Component/Wallpaper/WallpaperV01";
+import WallpaperV02 from "./Component/Wallpaper/WallpaperV02";
+import MenuBottun from './Page/MenuBottun/MenuBottun';
+import InWork from './Page/InWork/InWork';
+import MenuArt from './Page/MenuArt/MenuArt';
+import MenuProg from './Page/MenuProg/MenuProg';
+import Tool from './Page/Tool/Tool';
+
 
 function App() {
+  const [pageActive, setPageActive] = useState(null);
+
+  const pageIsMenuButton = () =>{return setPageActive("MenuBottun")}
+  const pageIsMenuArt = () =>{return setPageActive("MenuArt")}
+  const pageIsMenuProg = () =>{return setPageActive("MenuProg")}
+  const pageIsToolInfo = () =>{return setPageActive("ToolInfo")}
+  const pageIsToolDev = () =>{return setPageActive("ToolDev")}
+  const pageIsInWork = () =>{return setPageActive("InWork")}
+  const pageIsIntro = () =>{return setPageActive(null)}
+
+  const pageIsActive = (pageActive) => {
+      if(pageActive === "MenuBottun"){
+        return <MenuBottun 
+        pageIsMenuArt={pageIsMenuArt} 
+        pageIsMenuProg={pageIsMenuProg}
+        pageIsToolInfo={pageIsToolInfo}
+        pageIsToolDev={pageIsToolDev}
+        pageIsInWork={pageIsInWork} 
+        pageIsIntro={pageIsIntro}/>;
+      } else if (pageActive === "MenuArt"){
+        return <MenuArt pageIsIntro={pageIsIntro} />
+      } else if (pageActive === "MenuProg"){
+        return <MenuProg pageIsIntro={pageIsIntro} />
+      } else if (pageActive === "ToolInfo"){
+        return <Tool pageIsIntro={pageIsIntro} isInf={true} />
+      } else if (pageActive === "ToolDev"){
+        return <Tool pageIsIntro={pageIsIntro} isInf={false} />
+      } else if (pageActive === "InWork"){
+        return <InWork pageIsIntro={pageIsIntro}/>;
+      } else{
+        return<Intro pageIsMenuButton={pageIsMenuButton}/>;
+      }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <WallpaperV01/>
+      <WallpaperV02/>
+      {pageIsActive(pageActive)}
     </div>
   );
 }
