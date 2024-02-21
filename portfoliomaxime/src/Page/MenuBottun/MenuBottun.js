@@ -19,7 +19,7 @@ function MenuBottun({pageIsMenuArt, pageIsMenuProg, pageIsToolInfo, pageIsToolDe
     return (
       <>
         <div style={{width: '100px',margin:'10px'}}>
-          <Buttonbias write={text.return} newFunction={pageIsIntro} isSkew={true}/>
+          <Buttonbias write={text.return} newFunction={pageIsIntro} isSkew={true} dimension={3}/>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100vh', overflow: 'hidden' }}>
             {isDesktop ? (
