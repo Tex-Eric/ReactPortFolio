@@ -9,7 +9,7 @@ function Intro({pageIsMenuButton}) {
 
   return (
       <div style={IntroGlobalStyle(isDesktop)}>
-        <p style={Typo01Style(isDesktop)}>Bienvenu sur mon site</p>
+        <p style={Typo01Style(isDesktop)}>Bienvenue sur mon site</p>
         <p style={Typo02Style(isDesktop)}>Je suis Maxime</p>
         <Buttonbias write={buttonWrite} newFunction={pageIsMenuButton} isSkew={true} dimension={1}/>
       </div>

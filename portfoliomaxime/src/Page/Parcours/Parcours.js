@@ -24,25 +24,25 @@ function Parcours({pageIsIntro}) {
             return {
                 title: "École ESMI/Brassart",
                 smallTitle:"École de graphiste et de multimédia",
-                text: "C'est au cours de ces 3 années que j'ai appris les arts graphiques, les bases de l'illustration et les diverses logiciels vue précédemment."
+                text: "C'est au cours de ces 3 années que j'ai appris les arts graphiques, les bases de l'illustration et les divers logiciels vus précédemment."
             }
         }else if (parcoursActive === "2020-2023"){
             return {
                 title: "École 3iS Bordeaux",
                 smallTitle:"École de film et du jeux vidéo",
-                text: "Dernière année d'infographie avec la spécialité jeux vidéo et intégration. J'ai pu travailler sur le rig et le skin de personnage 3D et leurs animations."
+                text: "Dernière année d'infographie avec la spécialité jeux vidéo et intégration. J'ai pu travailler sur le rig et le skin de personnages 3D et leurs animations."
             }
         }else if (parcoursActive === "2023-2026"){
             return {
                 title: "École ETNA",
                 smallTitle:"École de développeurs web en alternance",
-                text: "Formation pour devenir développeur Web, je suis en alternance à ACENSI où j'apprends la création de site internet ou d'application."
+                text: "Formation pour devenir développeur Web, je suis en alternance à ACENSI où j'apprends la création de sites internet ou d'applications."
             }
         }else{
             return {
                 title: "",
                 smallTitle:"",
-                text: "← Choisie une date"
+                text: "← Choisissez une date"
             }
         }
     }

@@ -9,7 +9,7 @@ function MenuBottun({pageIsMenuArt, pageIsMenuProg, pageIsToolInfo, pageIsToolDe
         art: "Art",
         prog: "Programmation",
         info: "Outil Infographie",
-        dev: "Outil Developpement",
+        dev: "Outil Développement",
         parc: "Parcours",
         desc: "Description",
         bonus: "Bonus",
@@ -37,7 +37,7 @@ function MenuBottun({pageIsMenuArt, pageIsMenuProg, pageIsToolInfo, pageIsToolDe
                         fontWeight: "700",
                         color: "#FFFFFF",
                         margin:'10px 0 50px 0'
-                    }}>Cliqué sur un boutton pour voir son contenu</p>
+                    }}>Cliqué sur un boutton pour voir son contenu.</p>
                     </div>
                     <div style={MenuBottunGrid01}>
                         <Buttonbias write={text.art} newFunction={pageIsMenuArt} gridColumn={"1"} gridRow={"1/6"} dimension={5} />
@@ -67,7 +67,7 @@ function MenuBottun({pageIsMenuArt, pageIsMenuProg, pageIsToolInfo, pageIsToolDe
                         color: "#FFFFFF",
                         margin:'0 25px 25px 25px',
                         textAlign: "center"
-                    }}>Cliqué sur un boutton pour voir son contenu</p>
+                    }}>Cliqué sur un boutton pour voir son contenu.</p>
                     </div>
                     <div style={MenuBottunGrid03}>
                         <Buttonbias write={text.art} newFunction={pageIsMenuArt} gridColumn={"1/3"} gridRow={"1/3"} isSkew={true} dimension={3} />

@@ -10,7 +10,7 @@ function Tool({pageIsIntro, isInf}) {
     const buttonWrite = '← retour';
 
     const titleInfo = `Mes outils d'infographie`;
-    const titleDev = 'Mes outils de dévelloppement';
+    const titleDev = 'Mes outils de développement';
 
     const Datas = isInf ? DataInfo: DataDev;
     const title = isInf ? titleInfo: titleDev;

@@ -29,7 +29,7 @@ function Description({pageIsIntro}) {
                             <p href={data.link} style={DescriptionLinkText}>Contact : {data.link}</p>
                             <a href={process.env.PUBLIC_URL + data.PDFImage}
                             target="_blank" rel="noopener noreferrer"
-                            style={DescriptionLinkText}>Open PDF</a>
+                            style={DescriptionLinkText}>PDF du CV</a>
                         </div>
                 </div>
                 </React.Fragment>
@@ -50,7 +50,7 @@ function Description({pageIsIntro}) {
                                 <p href={data.link} style={DescriptionMobileLinkText}>Contact : {data.link}</p>
                                 <a href={process.env.PUBLIC_URL + data.PDFImage}
                                 target="_blank" rel="noopener noreferrer"
-                                style={DescriptionMobileLinkText}>Open PDF</a>
+                                style={DescriptionMobileLinkText}>PDF du CV</a>
                             </div>
                 </div>
                 </React.Fragment>

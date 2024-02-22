@@ -23,25 +23,25 @@ function MenuProg({pageIsIntro}) {
             return {
                 title: "Langage et Framework du Front",
                 smallTitle:"HTML, CSS, JavaScipt, React, Redux, Axios, testJest et Cypress",
-                text: "Je suis spécialisé dans la création d'interfaces utilisateur dynamiques et réactives. Grâce à une expertise en HTML, CSS et JavaScript, ainsi que dans les frameworks tels que React et les outils comme Redux, Axios, Jest et Cypress, je suis capable de concevoir et de mettre en œuvre des expériences web, centrées sur l'utilisateur."
+                text: "Je suis spécialisé dans la création d'interfaces utilisateur dynamiques et réactives. Grâce à une expertise en HTML, CSS et JavaScript, ainsi que dans les frameworks tels que React et les outils comme Redux, Axios, Jest et Cypress, je suis capable de concevoir et de mettre en œuvre des expériences web centrées sur l'utilisateur."
             }
         }else if (progActive === "Back-end et DataBase"){
             return {
                 title: "Langage et Framework du Back et DataBase",
                 smallTitle:"JavaScript express, fastify, Sequelize, MySQL, PostgreSQL, Redis et testJest",
-                text: "Pour le Back-end, je maîtrise les technologies de JavaScript avec Express et Fastify, ainsi que des outils comme Sequelize pour l'interaction avec les bases de données relationnelles telles que MySQL et PostgreSQL, Redis pour le stockage de données en cache. Grâce  à l'utilisation de testJest, je suis capable de créer des applications robustes, évolutives et sécurisées, répondant aux besoins fonctionnels et aux exigences."
+                text: "Pour le back-end, je maîtrise les technologies de JavaScript avec Express et Fastify, ainsi que des outils comme Sequelize pour l'interaction avec les bases de données relationnelles telles que MySQL et PostgreSQL, et Redis pour le stockage de données en cache. Grâce à l'utilisation de Jest, je suis capable de créer des applications robustes, évolutives et sécurisées, répondant aux besoins fonctionnels et aux exigences."
             }
         }else if (progActive === "Autre"){
             return {
                 title: "Web Design et infographie",
                 smallTitle:"Figma, suite Adobe, suite Autodesk et méthode agile",
-                text: "J'ai aussi des compétences en Web designer et graphisme, je suis compétent dans l'utilisation d'outils de conception tels que Figma et les suites Adobe et Autodesk pour créer des interfaces utilisateur intuitives et attrayantes. Ma connaissance de la méthode agile me permet de travailler de manière collaborative et efficace, en m'adaptant rapidement aux besoins du projet."
+                text: "J'ai aussi des compétences en web design et graphisme. Je suis compétent dans l'utilisation d'outils de conception tels que Figma et les suites Adobe et Autodesk pour créer des interfaces utilisateur intuitives et attrayantes. Ma connaissance de la méthode agile me permet de travailler de manière collaborative et efficace, en m'adaptant rapidement aux besoins du projet."
             }
         }else{
             return {
                 title: "",
                 smallTitle:"",
-                text: "← Choisie une case"
+                text: "← Choisissez une case"
             }
         }
     }
