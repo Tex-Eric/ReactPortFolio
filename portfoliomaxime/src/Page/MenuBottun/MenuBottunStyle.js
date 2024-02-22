@@ -3,7 +3,7 @@ export const MenuBottunGrid01 = {
     gridTemplateColumns:'1fr 1fr',
     gridTemplateRows: '1fr 1fr 1fr 1fr 1fr',
     gap:'7px 10px',
-    padding: '100px',
+    padding: '20px 100px 100px 100px',
     transform: 'skew(-10deg)',
     height:'50vh'
 }
@@ -20,7 +20,7 @@ export const MenuBottunGrid03 = {
     gridTemplateColumns:'1fr 1fr',
     gridTemplateRows: '1fr 1fr 1fr 1fr 1fr',
     gap:'7px 10px',
-    padding: '50px',
+    padding: '0 50px 50px 50px',
     height:'50vh'
 }
 export const MenuBottunGrid04 ={
