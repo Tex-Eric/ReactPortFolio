@@ -36,19 +36,19 @@ function App() {
         pageIsInWork={pageIsInWork} 
         pageIsIntro={pageIsIntro}/>;
       } else if (pageActive === "MenuArt"){
-        return <MenuArt pageIsIntro={pageIsIntro} />
+        return <MenuArt pageIsIntro={pageIsMenuButton} />
       } else if (pageActive === "MenuProg"){
-        return <MenuProg pageIsIntro={pageIsIntro} />
+        return <MenuProg pageIsIntro={pageIsMenuButton} />
       } else if (pageActive === "ToolInfo"){
-        return <Tool pageIsIntro={pageIsIntro} isInf={true} />
+        return <Tool pageIsIntro={pageIsMenuButton} isInf={true} />
       } else if (pageActive === "ToolDev"){
-        return <Tool pageIsIntro={pageIsIntro} isInf={false} />
+        return <Tool pageIsIntro={pageIsMenuButton} isInf={false} />
       } else if (pageActive === "Parcours"){
-        return <Parcours pageIsIntro={pageIsIntro} />
+        return <Parcours pageIsIntro={pageIsMenuButton} />
       } else if (pageActive === "Description"){
-        return <Description pageIsIntro={pageIsIntro} />
+        return <Description pageIsIntro={pageIsMenuButton} />
       } else if (pageActive === "InWork"){
-        return <InWork pageIsIntro={pageIsIntro}/>;
+        return <InWork pageIsIntro={pageIsMenuButton}/>;
       } else{
         return<Intro pageIsMenuButton={pageIsMenuButton}/>;
       }
