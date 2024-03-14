@@ -1,0 +1,37 @@
+[
+    {
+        "id":1,
+        "isImg":true,
+        "img01":"/images/ToolInfoBonus/3DSmaxCompil.png",
+        "title":"Autodesk 3DSmax",
+        "text":"Je peux modéliser, ouvrir les UVs, rigger, skinner, animé et rendre sur 3DSmax"
+    },
+    {
+        "id":2,
+        "isImg":true,
+        "img01":"/images/ToolInfoBonus/ZbrushCompil.png",
+        "title":"Zbrush",
+        "text":"Je peux sculpter en 3D et optimiser pour divers utilisations"
+    },
+    {
+        "id":3,
+        "isImg":true,
+        "img01":"/images/ToolInfoBonus/SubstanceCompil.png",
+        "title":"Substance Painter",
+        "text":"Je peux créer des textures et les appliquer sur les objets tout en gérant le Bake Mesh Maps."
+    },
+    {
+        "id":4,
+        "isImg":true,
+        "img01":"/images/ToolInfoBonus/PhotoshopCompil.png",
+        "title":"Adobe Photoshop",
+        "text":"Je peux utiliser Photoshop pour créer des textures, faire de la retouche photo, peindre et dessiner."
+    },
+    {
+        "id":5,
+        "isImg":true,
+        "img01":"/images/ToolInfoBonus/IllustratorCompil.png",
+        "title":"Adobe Illustrator",
+        "text":"Grâce à Illustrator, je peux faire de vectoriel et créer des SVG."
+    }
+]

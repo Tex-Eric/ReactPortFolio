@@ -49,7 +49,7 @@ function MenuProg({pageIsIntro}) {
 
     return (
       <>
-        <div style={{width: '100px',margin:'10px'}}>
+        <div style={{width: '100px', padding:'10px'}}>
           <Buttonbias write={textReturn} newFunction={pageIsIntro} isSkew={true} dimension={2}/>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100vh', overflow: 'hidden' }}>

@@ -5,15 +5,12 @@ export const MenuArtMobileVue = {
     alignItems: 'center',
     margin: '30px 0 30px 0',
     gap:'10px'
-
-
 }
 export const MenuArtMobileComponentLeft = {
     display:'flex',
     flexDirection:'column',
     justifyContent:'center',
     alignItems: 'center'
-
 }
 /* ------------------------------------------------------------------- */
 export const MenuArtMobileImage = (left) => ({

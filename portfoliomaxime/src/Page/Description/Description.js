@@ -11,7 +11,7 @@ function Description({pageIsIntro}) {
 
   return (
     <>
-        <div style={{width: '100px',margin:'10px'}}>
+        <div style={{width: '100px', padding:'10px'}}>
           <Buttonbias write={buttonWrite} newFunction={pageIsIntro} isSkew={true} dimension={1}/>
         </div>
         {isDesktop?(<div style={DescriptionVue}>

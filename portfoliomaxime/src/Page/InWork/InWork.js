@@ -6,7 +6,7 @@ const returnWrite = '← retour';
 
     return (
         <>
-        <div style={{width: '100px',margin:'10px'}}>
+        <div style={{width: '100px', padding:'10px'}}>
           <Buttonbias write={returnWrite} newFunction={pageIsIntro} isSkew={true} dimension={1}/>
       </div>
         <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', height:'100vh',overflow: 'hidden'}}>

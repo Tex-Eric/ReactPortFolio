@@ -1,9 +1,5 @@
 [
     {
-        "title":"Autodesk 3DSmax",
-        "link":"/images/ToolInfo/autodesk-3ds-max.jpg"
-    },
-    {
         "title":"Autodesk Maya",
         "link":"/images/ToolInfo/autodesk-maya.jpg"
     },
@@ -16,32 +12,16 @@
         "link":"/images/ToolInfo/GKGT--Bw_400x400.jpg"
     },
     {
-        "title":"Zbrush",
-        "link":"/images/ToolInfo/téléchargement.png"
-    },
-    {
         "title":"Nuke",
         "link":"/images/ToolInfo/nuke.png"
-    },
-    {
-        "title":"Substance Painter",
-        "link":"/images/ToolInfo/allegorithmic-substance-painter.jpg"
     },
     {
         "title":"Adobe AfterEffects",
         "link":"/images/ToolInfo/Adobe-After-Effects-Logo-Vector.jpg"
     },
     {
-        "title":"Adobe Photoshop",
-        "link":"/images/ToolInfo/Adobe_Photoshop.png"
-    },
-    {
         "title":"Adobe Premiere",
         "link":"/images/ToolInfo/adobe premiere.jpg"
-    },
-    {
-        "title":"Adobe Illustrator",
-        "link":"/images/ToolInfo/adobe Illustrator.png"
     },
     {
         "title":"Adobe Animate",

@@ -5,8 +5,6 @@ export const MenuArtVue = {
     alignItem: 'center',
     margin: '40px',
     gap:'40px'
-
-
 }
 export const MenuArtComponentLeft = {
     display:'flex',

@@ -55,7 +55,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div >
       <WallpaperV01/>
       <WallpaperV02/>
       {pageIsActive(pageActive)}
