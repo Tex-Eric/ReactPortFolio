@@ -1,0 +1,14 @@
+[
+    {
+        "Title":"Les aventures de Léo et Tom",
+        "Couv":"/images/BD/LesAventuresDeLeoEtTom/couverture.webp",
+        "Description":"Léo et Tom sont deux amnésiques, perdus dans un monde où les planètes, les étoiles et les moyens de transport interstellaire sont des animaux. Ils rencontreront Rayllus, Princesse et dernière représentante noble de son peuple en voie d'extinction.",
+        "Link":"DataBDALT"
+    },
+    {
+        "Title":"Le passé de Léo et Tom",
+        "Couv":"/images/BD/LePasseDeLeoEtTom/couverturePasseLeoTom72p.webp",
+        "Description":"Suite des aventures de Léo et Tom, les deux petits héros vont aider la princesse Rayllus à retrouver son peuple avant que de dangereux ennemis ne lui mettent la main dessus.",
+        "Link":"DataBDPLT"
+    }
+]

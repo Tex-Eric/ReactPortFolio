@@ -3,12 +3,13 @@ import Intro from "./Page/Intro/Intro";
 import WallpaperV01 from "./Component/Wallpaper/WallpaperV01";
 import WallpaperV02 from "./Component/Wallpaper/WallpaperV02";
 import MenuBottun from './Page/MenuBottun/MenuBottun';
-import InWork from './Page/InWork/InWork';
+/* import InWork from './Page/InWork/InWork'; */
 import MenuArt from './Page/MenuArt/MenuArt';
 import MenuProg from './Page/MenuProg/MenuProg';
 import Tool from './Page/Tool/Tool';
 import Parcours from './Page/Parcours/Parcours';
 import Description from './Page/Description/Description';
+import Bonus from './Page/Bonus/Bonus';
 
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
       } else if (pageActive === "Description"){
         return <Description pageIsIntro={pageIsMenuButton} />
       } else if (pageActive === "InWork"){
-        return <InWork pageIsIntro={pageIsMenuButton}/>;
+        return <Bonus pageIsIntro={pageIsMenuButton}/>;
       } else{
         return<Intro pageIsMenuButton={pageIsMenuButton}/>;
       }
