@@ -32,10 +32,11 @@ export const MenuBDMobileFirstImage = (left) => ({
     gridColumn: "1/3",
     gridRow:"1/4"
 });
-export const MenuBDMobileLeftImage = (left) => ({
+export const MenuBDMobileLeftImage = (zoom) => ({
     objectFit: 'contain',
-    height: "65vh",
-    maxWidth: "100%"
+    height:zoom? "100vh": "65vh",
+    cursor:zoom? "zoom-out":"zoom-in",
+    maxWidth:zoom? "":"100%"
 });
 
 /* ------------------------------------------------------------------- */

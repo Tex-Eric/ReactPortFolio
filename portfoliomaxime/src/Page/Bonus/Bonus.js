@@ -11,6 +11,7 @@ import { MenuBDFirstImage, MenuBDImage, MenuBDLeftImage, MenuBDText, MenuBDTextT
 function Bonus({pageIsIntro}){
     const [BDActive, setBDActive] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
+    const [zoom, setZoom] = useState(false);
     const isDesktop = useMediaQuery('(min-width: 640px)');
     const buttonWrite = '← retour';
     const buttonWrite02 = '← Bonus';
@@ -30,22 +31,21 @@ function Bonus({pageIsIntro}){
             </div>
             {BDActive?(
                 <div style={{width: '100px', padding:'10px'}}>
-                <Buttonbias write={buttonWrite02} newFunction={() => {setBDActive(null); setCurrentPage(1);}} isSkew={true} dimension={1}/>
+                <Buttonbias write={buttonWrite02} newFunction={() => {setBDActive(null); setCurrentPage(1); setZoom(false);}} isSkew={true} dimension={1}/>
                 </div>
                 ):null
             }
         {isDesktop ? (
             BDActive ? (
-                <div style={{backgroundColor:"#001924", padding:"30px", height: "75%", border:"2px solid #B2E2F2", borderRadius:"5px", display: "flex", justifyContent:"center", gap:"20px", flexDirection: "column", alignItems: 'center'}}>
+                <div style={{backgroundColor:"#001924", padding:"30px", height: "75%", border:"2px solid #B2E2F2", borderRadius:"5px", display: "flex", justifyContent:"center", gap:"20px", flexDirection: "column", alignItems: 'center', flexWrap: 'wrap'}}>
                             <img src={process.env.PUBLIC_URL + dataMap(BDActive)[currentPage-1].page}
                                 alt={dataMap(BDActive)[currentPage-1].page} title={dataMap(BDActive)[currentPage-1].page}
-                                style={MenuBDLeftImage(true)}
+                                style={MenuBDLeftImage(zoom)}
                                 onClick={() => {
-                                    if (currentPage === dataMap(BDActive).length) { // si on est à la dernière page
-                                        setCurrentPage(1); // remettre currentPage à 0
-                                        setBDActive(null); // remettre BDActive à null
+                                    if (zoom === false) {
+                                        setZoom(true); 
                                     } else {
-                                        setCurrentPage(currentPage + 1); // sinon, passer à la page suivante
+                                        setZoom(false);
                                     }
                                 }}
                             />
@@ -99,21 +99,18 @@ function Bonus({pageIsIntro}){
         )
         ) : (
         BDActive ? (
-            <div style={{backgroundColor:"#001924", padding:"15px", height: "100%", border:"2px solid #B2E2F2", borderRadius:"5px", display: "flex", justifyContent:"center", gap:"20px", flexDirection: "column", alignItems: 'center'}}>
-                <div> {/* Mettre le nouveau code pour le scroll */}
+            <div style={{backgroundColor:"#001924", padding:"15px", height: "100%", border:"2px solid #B2E2F2", borderRadius:"5px", display: "flex", justifyContent:"ce,ter", gap:"20px", flexDirection: "column", alignItems: 'center', flexWrap: 'wrap'}}>
                         <img src={process.env.PUBLIC_URL + dataMap(BDActive)[currentPage-1].page}
                             alt={dataMap(BDActive)[currentPage-1].page} title={dataMap(BDActive)[currentPage-1].page}
-                            style={MenuBDMobileLeftImage(true)}
+                            style={MenuBDMobileLeftImage(zoom)}
                             onClick={() => {
-                                if (currentPage === dataMap(BDActive).length) { // si on est à la dernière page
-                                    setCurrentPage(1); // remettre currentPage à 0
-                                    setBDActive(null); // remettre BDActive à null
+                                if (zoom === false) {
+                                    setZoom(true); 
                                 } else {
-                                    setCurrentPage(currentPage + 1); // sinon, passer à la page suivante
+                                    setZoom(false);
                                 }
                             }}
                         />
-                </div>
                         <div style={{display: "flex", justifyContent:"center", gap:"20px", flexDirection: "row", alignItems: 'center',}}>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" fill='#B2E2F2'
                             onClick={() => {

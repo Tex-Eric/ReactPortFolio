@@ -34,9 +34,10 @@ export const MenuBDFirstImage = (left) => ({
     gridColumn: "1/3",
     gridRow:"1/4"
 });
-export const MenuBDLeftImage = (left) => ({
+export const MenuBDLeftImage = (zoom) => ({
     objectFit: 'contain',
-    height: "74vh",
+    height:zoom? "140vh": "74vh",
+    cursor:zoom? "zoom-out":"zoom-in"
 });
 
 /* ------------------------------------------------------------------- */
