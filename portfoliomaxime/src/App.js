@@ -25,35 +25,66 @@ function App() {
   const pageIsInWork = () =>{return setPageActive("InWork")}
   const pageIsIntro = () =>{return setPageActive(null)}
 
+  // const pageIsActiveV1 = (pageActive) => {
+  //     if(pageActive === "MenuBottun"){
+  //       return <MenuBottun 
+  //       pageIsMenuArt={pageIsMenuArt} 
+  //       pageIsMenuProg={pageIsMenuProg}
+  //       pageIsToolInfo={pageIsToolInfo}
+  //       pageIsToolDev={pageIsToolDev}
+  //       pageIsParcours={pageIsParcours}
+  //       pageIsDescription={pageIsDescription}
+  //       pageIsInWork={pageIsInWork} 
+  //       pageIsIntro={pageIsIntro}/>;
+  //     } else if (pageActive === "MenuArt"){
+  //       return <MenuArt pageIsIntro={pageIsMenuButton} />
+  //     } else if (pageActive === "MenuProg"){
+  //       return <MenuProg pageIsIntro={pageIsMenuButton} />
+  //     } else if (pageActive === "ToolInfo"){
+  //       return <Tool pageIsIntro={pageIsMenuButton} isInf={true} />
+  //     } else if (pageActive === "ToolDev"){
+  //       return <Tool pageIsIntro={pageIsMenuButton} isInf={false} />
+  //     } else if (pageActive === "Parcours"){
+  //       return <Parcours pageIsIntro={pageIsMenuButton} />
+  //     } else if (pageActive === "Description"){
+  //       return <Description pageIsIntro={pageIsMenuButton} />
+  //     } else if (pageActive === "InWork"){
+  //       return <Bonus pageIsIntro={pageIsMenuButton}/>;
+  //     } else{
+  //       return<Intro pageIsMenuButton={pageIsMenuButton}/>;
+  //     }
+  // };
+
   const pageIsActive = (pageActive) => {
-      if(pageActive === "MenuBottun"){
-        return <MenuBottun 
-        pageIsMenuArt={pageIsMenuArt} 
-        pageIsMenuProg={pageIsMenuProg}
-        pageIsToolInfo={pageIsToolInfo}
-        pageIsToolDev={pageIsToolDev}
-        pageIsParcours={pageIsParcours}
-        pageIsDescription={pageIsDescription}
-        pageIsInWork={pageIsInWork} 
-        pageIsIntro={pageIsIntro}/>;
-      } else if (pageActive === "MenuArt"){
-        return <MenuArt pageIsIntro={pageIsMenuButton} />
-      } else if (pageActive === "MenuProg"){
-        return <MenuProg pageIsIntro={pageIsMenuButton} />
-      } else if (pageActive === "ToolInfo"){
-        return <Tool pageIsIntro={pageIsMenuButton} isInf={true} />
-      } else if (pageActive === "ToolDev"){
-        return <Tool pageIsIntro={pageIsMenuButton} isInf={false} />
-      } else if (pageActive === "Parcours"){
-        return <Parcours pageIsIntro={pageIsMenuButton} />
-      } else if (pageActive === "Description"){
-        return <Description pageIsIntro={pageIsMenuButton} />
-      } else if (pageActive === "InWork"){
+    switch(pageActive){
+      case 'MenuBottun':
+        return <MenuBottun
+          pageIsMenuArt={pageIsMenuArt} 
+          pageIsMenuProg={pageIsMenuProg}
+          pageIsToolInfo={pageIsToolInfo}
+          pageIsToolDev={pageIsToolDev}
+          pageIsParcours={pageIsParcours}
+          pageIsDescription={pageIsDescription}
+          pageIsInWork={pageIsInWork} 
+          pageIsIntro={pageIsIntro}/>;
+      case 'MenuArt':
+        return <MenuArt pageIsIntro={pageIsMenuButton} />;
+      case 'MenuProg':
+        return <MenuProg pageIsIntro={pageIsMenuButton} />;
+      case 'ToolInfo':
+        return <Tool pageIsIntro={pageIsMenuButton} isInf={true} />;
+      case 'ToolDev':
+        return <Tool pageIsIntro={pageIsMenuButton} isInf={false} />;
+      case 'Parcours':
+        return <Parcours pageIsIntro={pageIsMenuButton} />;
+      case 'Description':
+        return <Description pageIsIntro={pageIsMenuButton} />;
+      case 'InWork':
         return <Bonus pageIsIntro={pageIsMenuButton}/>;
-      } else{
+      default:
         return<Intro pageIsMenuButton={pageIsMenuButton}/>;
-      }
-  };
+    }
+  }
 
   return (
     <div >
