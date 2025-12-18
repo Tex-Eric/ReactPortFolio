@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Intro from "./Page/Intro/Intro";
 import WallpaperV01 from "./Component/Wallpaper/WallpaperV01";
 import WallpaperV02 from "./Component/Wallpaper/WallpaperV02";
@@ -13,85 +14,22 @@ import Bonus from './Page/Bonus/Bonus';
 
 
 function App() {
-  const [pageActive, setPageActive] = useState(null);
-
-  const pageIsMenuButton = () =>{return setPageActive("MenuBottun")}
-  const pageIsMenuArt = () =>{return setPageActive("MenuArt")}
-  const pageIsMenuProg = () =>{return setPageActive("MenuProg")}
-  const pageIsToolInfo = () =>{return setPageActive("ToolInfo")}
-  const pageIsToolDev = () =>{return setPageActive("ToolDev")}
-  const pageIsParcours = () =>{return setPageActive("Parcours")}
-  const pageIsDescription = () =>{return setPageActive("Description")}
-  const pageIsInWork = () =>{return setPageActive("InWork")}
-  const pageIsIntro = () =>{return setPageActive(null)}
-
-  // const pageIsActiveV1 = (pageActive) => {
-  //     if(pageActive === "MenuBottun"){
-  //       return <MenuBottun 
-  //       pageIsMenuArt={pageIsMenuArt} 
-  //       pageIsMenuProg={pageIsMenuProg}
-  //       pageIsToolInfo={pageIsToolInfo}
-  //       pageIsToolDev={pageIsToolDev}
-  //       pageIsParcours={pageIsParcours}
-  //       pageIsDescription={pageIsDescription}
-  //       pageIsInWork={pageIsInWork} 
-  //       pageIsIntro={pageIsIntro}/>;
-  //     } else if (pageActive === "MenuArt"){
-  //       return <MenuArt pageIsIntro={pageIsMenuButton} />
-  //     } else if (pageActive === "MenuProg"){
-  //       return <MenuProg pageIsIntro={pageIsMenuButton} />
-  //     } else if (pageActive === "ToolInfo"){
-  //       return <Tool pageIsIntro={pageIsMenuButton} isInf={true} />
-  //     } else if (pageActive === "ToolDev"){
-  //       return <Tool pageIsIntro={pageIsMenuButton} isInf={false} />
-  //     } else if (pageActive === "Parcours"){
-  //       return <Parcours pageIsIntro={pageIsMenuButton} />
-  //     } else if (pageActive === "Description"){
-  //       return <Description pageIsIntro={pageIsMenuButton} />
-  //     } else if (pageActive === "InWork"){
-  //       return <Bonus pageIsIntro={pageIsMenuButton}/>;
-  //     } else{
-  //       return<Intro pageIsMenuButton={pageIsMenuButton}/>;
-  //     }
-  // };
-
-  const pageIsActive = (pageActive) => {
-    switch(pageActive){
-      case 'MenuBottun':
-        return <MenuBottun
-          pageIsMenuArt={pageIsMenuArt} 
-          pageIsMenuProg={pageIsMenuProg}
-          pageIsToolInfo={pageIsToolInfo}
-          pageIsToolDev={pageIsToolDev}
-          pageIsParcours={pageIsParcours}
-          pageIsDescription={pageIsDescription}
-          pageIsInWork={pageIsInWork} 
-          pageIsIntro={pageIsIntro}/>;
-      case 'MenuArt':
-        return <MenuArt pageIsIntro={pageIsMenuButton} />;
-      case 'MenuProg':
-        return <MenuProg pageIsIntro={pageIsMenuButton} />;
-      case 'ToolInfo':
-        return <Tool pageIsIntro={pageIsMenuButton} isInf={true} />;
-      case 'ToolDev':
-        return <Tool pageIsIntro={pageIsMenuButton} isInf={false} />;
-      case 'Parcours':
-        return <Parcours pageIsIntro={pageIsMenuButton} />;
-      case 'Description':
-        return <Description pageIsIntro={pageIsMenuButton} />;
-      case 'InWork':
-        return <Bonus pageIsIntro={pageIsMenuButton}/>;
-      default:
-        return<Intro pageIsMenuButton={pageIsMenuButton}/>;
-    }
-  }
-
   return (
-    <div >
+    <Router >
       <WallpaperV01/>
       <WallpaperV02/>
-      {pageIsActive(pageActive)}
-    </div>
+      <Routes>
+        <Route path="/" element={<Intro />} />
+        <Route path="/menu" element={<MenuBottun />} />
+        <Route path="/art" element={<MenuArt />} />
+        <Route path="/prog" element={<MenuProg />} />
+        <Route path="/tool/info" element={<Tool isInf={true} />} />
+        <Route path="/tool/dev" element={<Tool isInf={false} />} />
+        <Route path="/parcours" element={<Parcours />} />
+        <Route path="/description" element={<Description />} />
+        <Route path="/bonus" element={<Bonus />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -4,7 +4,7 @@ import { ButtonTypo01Style, ButtonbiasStyleShape, ButtonbiasStyleShapeActive } f
 import React, { useState } from 'react';
 
 
-function Buttonbias({write, newFunction = null, gridColumn, gridRow, isSkew, dimension }) {
+function Buttonbias({write, newFunction, gridColumn, gridRow, isSkew, dimension }) {
     const [isHovered, setIsHovered] = useState(false);
     const [isActive, setIsActive] = useState(false);
     const isDesktop = useMediaQuery('(min-width: 640px)');

@@ -4,15 +4,17 @@ import Datas from "../../Data/DataArt/DataArt.json"
 import React from "react";
 import useMediaQuery from "../../Utils/useMediaQuery";
 import { MenuArtMobileComponentLeft, MenuArtMobileFirstImage, MenuArtMobileImage, MenuArtMobileLinkText, MenuArtMobileText, MenuArtMobileTextText, MenuArtMobileTitleText, MenuArtMobileVue } from "./MenuArtStyleMobile";
+import { useNavigate } from "react-router-dom";
 
-function MenuArt({pageIsIntro}) {
+function MenuArt() {
     const isDesktop = useMediaQuery('(min-width: 640px)');
+    const navigate = useNavigate();
     const buttonWrite = '← retour';
 
   return (
     <>
         <div style={{width: '100px', padding:'10px'}}>
-          <Buttonbias write={buttonWrite} newFunction={pageIsIntro} isSkew={true} dimension={1}/>
+          <Buttonbias write={buttonWrite} newFunction={() => navigate("/menu")} isSkew={true} dimension={1}/>
         </div>
         {isDesktop?(<div style={MenuArtVue}>
             {Datas.map((data, index)=>(
