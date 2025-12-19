@@ -17,7 +17,7 @@ function WallpaperV03() {
         objectFit: "contain",
         width: "100%",
         height: "100%",
-        scale: "5.7"
+        scale: "7"
     }
 
     const styles = `

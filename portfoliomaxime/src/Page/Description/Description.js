@@ -3,16 +3,18 @@ import { DescriptionComponentLeft, DescriptionFirstImage, DescriptionImage, Desc
 import Datas from "../../Data/DataDescription/DataDescription.json"
 import React from "react";
 import useMediaQuery from "../../Utils/useMediaQuery";
+import { useNavigate } from "react-router-dom";
 import { DescriptionMobileComponentLeft, DescriptionMobileFirstImage, DescriptionMobileImage, DescriptionMobileLinkText, DescriptionMobileText, DescriptionMobileTextText, DescriptionMobileTitleText, DescriptionMobileVue } from "./DescriptionStyleMobile";
 
 function Description({pageIsIntro}) {
     const isDesktop = useMediaQuery('(min-width: 640px)');
+    const navigate = useNavigate();
     const buttonWrite = '← retour';
 
   return (
     <>
         <div style={{width: '100px', padding:'10px'}}>
-          <Buttonbias write={buttonWrite} newFunction={pageIsIntro} isSkew={true} dimension={1}/>
+          <Buttonbias write={buttonWrite} newFunction={() => navigate("/menu")} isSkew={true} dimension={1}/>
         </div>
         {isDesktop?(<div style={DescriptionVue}>
             {Datas.map((data, index)=>(

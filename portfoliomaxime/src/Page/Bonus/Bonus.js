@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Buttonbias from "../../Component/Buttonbias/Buttonbias";
 import useMediaQuery from "../../Utils/useMediaQuery";
+import { useNavigate } from "react-router-dom";
 import DataBDIntro from "../../Data/DataBD/DataBDIntro/DataBDIntro.json"
 import DataBDPLT from "../../Data/DataBD/DataBDPLT/DataBDPLT.json"
 import DataBDALT from "../../Data/DataBD/DataBDALT/DataBDALT.json"
@@ -13,6 +14,7 @@ function Bonus({pageIsIntro}){
     const [currentPage, setCurrentPage] = useState(1);
     const [zoom, setZoom] = useState(false);
     const isDesktop = useMediaQuery('(min-width: 640px)');
+    const navigate = useNavigate();
     const buttonWrite = '← retour';
     const buttonWrite02 = '← Bonus';
     const buttonWrite03 = 'Lire →';
@@ -27,7 +29,7 @@ function Bonus({pageIsIntro}){
     return(
         <>
             <div style={{width: '100px', padding:'10px'}}>
-            <Buttonbias write={buttonWrite} newFunction={pageIsIntro} isSkew={true} dimension={1}/>
+            <Buttonbias write={buttonWrite} newFunction={() => navigate("/menu")} isSkew={true} dimension={1}/>
             </div>
             {BDActive?(
                 <div style={{width: '100px', padding:'10px'}}>

@@ -1,11 +1,13 @@
 import { useState } from "react";
 import Buttonbias from "../../Component/Buttonbias/Buttonbias";
 import useMediaQuery from "../../Utils/useMediaQuery";
+import { useNavigate } from "react-router-dom";
 import { ProgGrid01, ProgGrid02, ProgGridChoice, ProgGridText, ProgLinkText, ProgMobileGridChoice, ProgMobileGridText, ProgMobileLinkText, ProgMobileTextText, ProgMobileTitleText, ProgTextText, ProgTitleText } from "./MenuProgStyle";
 
 function MenuProg({pageIsIntro}) {
     const [progActive, setProgActive] = useState(null);
     const isDesktop = useMediaQuery('(min-width: 640px)');
+    const navigate = useNavigate();
     const textReturn = '← retour';
 
     const text = {
@@ -50,7 +52,7 @@ function MenuProg({pageIsIntro}) {
     return (
       <>
         <div style={{width: '100px', padding:'10px'}}>
-          <Buttonbias write={textReturn} newFunction={pageIsIntro} isSkew={true} dimension={2}/>
+          <Buttonbias write={textReturn} newFunction={() => navigate("/menu")} isSkew={true} dimension={2}/>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100vh', overflow: 'hidden' }}>
             {isDesktop ? (

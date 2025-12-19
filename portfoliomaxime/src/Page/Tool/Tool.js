@@ -4,11 +4,13 @@ import DataInfo from "../../Data/DataToolInf/DataTollInf.json";
 import DataInfoBonus from "../../Data/DataToolInf/DataToolInfBonus.json";
 import React from "react";
 import useMediaQuery from "../../Utils/useMediaQuery";
+import { useNavigate } from "react-router-dom";
 import { ToolComponent, ToolDivImage, ToolImage, ToolMobileComponent, ToolMobileDivImage, ToolMobileImage, ToolMobileTextText, ToolMobileTitleText, ToolMobileVue, ToolTextText, ToolTitleText, ToolVue } from "./ToolStyle";
 import { ToolInfComponentLeft, ToolInfMobileComponentLeft, ToolInfMobileVue, ToolInfVue, ToolInfoFirstImage, ToolInfoImage, ToolInfoMobileFirstImage, ToolInfoMobileText, ToolInfoMobileTextText, ToolInfoMobileTextTitle, ToolInfoText, ToolInfoTextText, ToolInfoTextTitle, ToolInfoobileImage } from "./ToolInfoStyle";
 
 function Tool({pageIsIntro, isInf}) {
     const isDesktop = useMediaQuery('(min-width: 640px)');
+    const navigate = useNavigate();
     const buttonWrite = '← retour';
 
     const titleInfo = `Mes outils d'infographie`;
@@ -20,7 +22,7 @@ function Tool({pageIsIntro, isInf}) {
   return (
     <>
         <div style={{width: '100px', padding:'10px'}}>
-          <Buttonbias write={buttonWrite} newFunction={pageIsIntro} isSkew={true} dimension={1}/>
+          <Buttonbias write={buttonWrite} newFunction={() => navigate("/menu")} isSkew={true} dimension={1}/>
         </div>
         {isDesktop? (
             <div style={ToolVue}>
