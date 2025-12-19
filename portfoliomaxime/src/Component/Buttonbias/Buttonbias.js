@@ -1,5 +1,4 @@
 import useMediaQuery from "../../Utils/useMediaQuery";
-import ButtonbiasBackground from "./ButtonbiasBackground";
 import { ButtonTypo01Style, ButtonbiasStyleShape, ButtonbiasStyleShapeActive } from "./ButtonbiasStyle";
 import React, { useState } from 'react';
 
@@ -22,7 +21,6 @@ function Buttonbias({write, newFunction, gridColumn, gridRow, isSkew, dimension 
         onMouseUp={() => setIsActive(false)}
         onClick={handleClick}
         >
-        <ButtonbiasBackground dimension={dimension}/>
         <p style={ButtonTypo01Style(isDesktop)}>{write}</p>
     </div>
   );

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Intro from "./Page/Intro/Intro";
-import WallpaperV01 from "./Component/Wallpaper/WallpaperV01";
+// import WallpaperV01 from "./Component/Wallpaper/WallpaperV01";
 import WallpaperV02 from "./Component/Wallpaper/WallpaperV02";
 import MenuBottun from './Page/MenuBottun/MenuBottun';
 /* import InWork from './Page/InWork/InWork'; */
@@ -11,12 +11,13 @@ import Tool from './Page/Tool/Tool';
 import Parcours from './Page/Parcours/Parcours';
 import Description from './Page/Description/Description';
 import Bonus from './Page/Bonus/Bonus';
+import WallpaperV03 from "./Component/Wallpaper/WallpaperV03";
 
 
 function App() {
   return (
     <Router >
-      <WallpaperV01/>
+      <WallpaperV03/>
       <WallpaperV02/>
       <Routes>
         <Route path="/" element={<Intro />} />
